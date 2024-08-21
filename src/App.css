@@ -1,38 +1,529 @@
-.App {
+/* 
+general 
+-------
+*/
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Updated this to #000000 for better contrast */
+  overflow-x: hidden;
+  background-color: #F2E8DF; /* Beige background */
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.ant-layout {
+  background: #FFF6E8 !important; /* Light Cream background for layout */
+}
+
+.mainLayout .ant-layout-header {
+  background: #f8f8f8;
+  padding: 0;
+  height: auto;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #708090; /* Slate gray for text */
+}
+
+.bgGray {
+  background: #fafafa; /* Could adjust this to a lighter shade if needed */
+}
+
+.ant-card-body {
+  background-color: rgb(255, 246, 232);
+}
+
+/* 
+Button
+------------
+*/
+.custom-button {
+  background-color: rgb(255, 246, 232);
+  border-color: rgb(255, 246, 232);
+  color: #000; /* Dark color for text readability */
+}
+
+.custom-button:hover {
+  background-color: rgb(255, 230, 200); /* Slightly darker shade on hover */
+  border-color: rgb(255, 230, 200);
+}
+
+/* 
+title holder
+------------
+*/
+.titleHolder {
   text-align: center;
+  position: relative;
+  padding: 0 0 20px;
+  margin: 0 0 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titleHolder:after {
+  transform: translateX(-50%);
+  content: '';
+  background: #FFA500; /* Orange for underline */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.titleHolder h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #000000; /* Dark text for titles */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 
+header
+------ 
+*/
+.ant-layout-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #FFF6E8 !important; /* Light cream header */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header .logo {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.header .logo-icon {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.header .logo .fas {
+  color: #FFA500; /* Orange for logo icon */
+  margin: 0 5px 0 0;
+  font-size: 28px;
+}
+
+.header .logo a {
+  color: #333; /* Dark text for logo link */
+}
+
+.header .ant-anchor-wrapper {
+  background: none;
+}
+
+.header .ant-anchor {
+  display: flex;
+}
+
+.header .ant-anchor-ink {
+  display: none;
+}
+
+.header .ant-anchor-link {
+  color: #FFA500;
+  padding: 0 20px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.header .ant-anchor-link:before,
+.header .ant-anchor-link:after {
+  content: '';
+  background: #FFA500; /* Orange for link underline */
+  color: #FFA500;
+  width: 1px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 30%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.header .ant-anchor-link:after {
+  color: #FFA500;
+  left: auto;
+  right: 30%;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:before,
+.header .ant-anchor-link:hover:before {
+  color: #FFA500;
+  left: 5%;
+  opacity: 1;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:after,
+.header .ant-anchor-link:hover:after {
+  right: 5%;
+  opacity: 1;
+}
+
+/* ant menu */
+.header .ant-menu {
+  border: 0;
+  background: none !important;
+}
+
+.header .ant-menu li.ant-menu-item {
+  position: relative;
+  color: #333; /* Dark text for menu items */
+}
+
+.header .ant-menu li.ant-menu-item:before,
+.header .ant-menu li.ant-menu-item:after {
+  content: '';
+  background: #FFA500; /* Orange for menu item underline */
+  width: 1px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 30%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.header .ant-menu li.ant-menu-item:after {
+  left: auto;
+  right: 30%;
+}
+
+.header .ant-menu li.ant-menu-item,
+.header .ant-menu li.ant-menu-item-selected {
+  border: 0 !important;
+}
+
+.header .ant-menu li.ant-menu-item-selected,
+.header .ant-menu li.ant-menu-item:hover {
+  color: #FFA500; /* Orange for active and hover menu items */
+  background: none;
+}
+
+.header .ant-menu li.ant-menu-item-selected:before,
+.header .ant-menu li.ant-menu-item:hover:before {
+  left: 5%;
+  opacity: 1;
+}
+
+.header .ant-menu li.ant-menu-item-selected:after,
+.header .ant-menu li.ant-menu-item:hover:after {
+  right: 5%;
+  opacity: 1;
+}
+
+/* 
+hero
+---- 
+*/
+.heroBlock {
+  background: url('../public/images/6b7f6b118ebc01f6e8d8b6e6027398af.jpg') no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  height: 100vh;
+}
+
+.heroBlock .container-fluid {
+  display: block !important;
+}
+
+.heroBlock .ant-carousel,
+.heroBlock .ant-carousel div {
+  height: 100%;
+}
+
+.heroBlock .slick-dots li button {
+  background: #000 !important;
+}
+
+.heroBlock .slick-dots li.slick-active button {
+  background: #FFA500 !important; /* Orange for active dot */
+}
+
+.heroBlock .content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 70px;
+  color: #FFF6E8; /* Light cream text for hero content */
+}
+
+.heroBlock h3 {
+  font-size: 60px;
+  line-height: 1.2;
+  margin: 0 0 30px;
+}
+
+.heroBlock p {
+  font-size: 30px;
+  margin: 0 0 30px;
+  color: #FFA500; /* Light cream text */
+}
+
+.heroBlock .btnHolder {
+  height: auto !important;
+}
+
+.heroBlock .btnHolder button,
+.heroBlock .btnHolder .fas {
+  margin: 0 10px 0 0;
+}
+
+/* 
+block
+----- 
+*/
+.block {
+  padding: 60px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* 
+about
+----- 
+*/
+.aboutBlock .contentHolder {
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.aboutBlock .icon {
+  font-size: 40px;
+  color: #FFA500; /* Orange for icons */
+  margin: 0 0 10px;
+}
+
+.aboutBlock .content {
+  text-align: center;
+  background: #FFF6E8; /* Light cream background for content blocks */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* 
+how it works
+------------
+*/
+.worksBlock {
+  background: url('assets/images/bg-works.jpg') no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #FFF6E8; /* Light cream text */
+  position: relative;
+}
+
+.worksBlock:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.worksBlock h2 {
+  color: #FFF6E8; /* Light cream for headings */
+}
+
+.worksBlock p {
+  color: rgb(255, 246, 232)
+}
+
+.worksBlock .contentHolder {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.worksBlock .contentHolder button {
+  font-size: 30px;
+  line-height: 1;
+  background: none;
+  border: 1px solid #FFF6E8; /* Light cream border */
+  color: #FFF6E8;
+  padding: 30px;
+  width: 220px;
+  height: 150px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* 
+faqs
+----
+*/
+.faqBlock .ant-collapse {
+  margin: 0 0 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.faqBlock .quickSupport {
+  text-align: center;
+  max-width: 740px;
+  margin: auto;
+  color: #708090; /* Slate gray for text */
+}
+
+.faqBlock .fas {
+  margin: 0 10px 0 0;
+  color: #FFA500; /* Orange for icons */
+}
+
+/* 
+pricing block
+-------------
+*/
+.pricingBlock .ant-list {
+  text-align: center;
+  background: #FFF6E8; /* Light cream background for pricing blocks */
+}
+
+.pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
+  box-shadow: 0 0 12px 2px #F2E8DF; /* Beige shadow for pricing highlight */
+  transform: scale(1.1);
+  position: relative;
+  z-index: 1;
+}
+
+.pricingBlock .ant-card-head-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000; /* Dark text for pricing titles */
+}
+
+.pricingBlock .large {
+  font-size: 38px;
+  line-height: 1;
+  margin: 0 0 20px;
+  color: #FFA500; /* Orange for large pricing text */
+}
+
+.pricingBlock .fab {
+  margin: 0 10px 0 0;
+}
+
+/* 
+contact
+-------
+*/
+.contactBlock .ant-form {
+  max-width: 640px;
+  margin: auto;
+  background: #FFF6E8; /* Light cream background for form */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contactBlock .ant-form textarea {
+  min-height: 120px;
+  height: 120px;
+}
+
+/* 
+footer
+------
+*/
+.ant-layout-footer {
+  background: #111 !important;
+  color: #FFF6E8 !important; /* Light cream text for footer */
+  padding: 60px 0 !important;
+  text-align: center;
+}
+
+.footer .logo {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  color: #FFF6E8; /* Light cream text for logo */
+}
+
+.footer .fas {
+  color: #FFA500; /* Orange for icons in footer */
+  font-size: 28px;
+  margin: 0 5px 0 0;
+}
+
+.footer .logo a {
+  color: #FFF6E8; /* Light cream for footer links */
+}
+
+.footer .socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 24px;
+}
+
+.footer .socials li {
+  margin: 0 20px;
+}
+
+.footer .socials a {
+  color: #FFF6E8; /* Light cream for social links */
+}
+
+.footer .socials a:hover {
+  color: #FFA500; /* Orange on hover */
+}
+
+.footer .goTop:hover {
+  opacity: 0.7;
+}
+
+.mobileVisible {
+  display: none;
+}
+
+.mobileHidden {
+  display: block;
+}
+
+/* 
+responsive
+----------
+*/
+@media only screen and (max-width: 991px) {
+  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
+    transform: scale(1.14);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
+    transform: scale(1);
+  }
+
+  .mobileVisible {
+    display: block;
+  }
+  
+  .mobileHidden {
+    display: none;
   }
 }
