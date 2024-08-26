@@ -1,47 +1,77 @@
-import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPaw, faPaintBrush, faRocket } from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect } from "react";
 import { BackTop } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt, faArrowCircleUp as faArrowCircleUpSolid} from "@fortawesome/free-solid-svg-icons";
+import { faCircleUp as faCircleUpRegular } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookF, faTwitter, faLinkedinIn, faPinterestP, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function AppFooter() {
+    useEffect(() => {
+        const goTopButton = document.querySelector('.goTop');
+        const footer = document.querySelector('.footer');
+
+        function handleScroll() {
+            if (goTopButton && footer) {
+                const footerRect = footer.getBoundingClientRect();
+                const footerTop = footerRect.top + window.scrollY;
+
+                if (window.scrollY + window.innerHeight >= footerTop) {
+                    goTopButton.classList.add('goTop.white');
+                } else {
+                    goTopButton.classList.remove('goTop.white');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="container-fluid">
             <div className="footer">
                 <div className="logo">
-                    <i className="fas fa-bolt"></i>
+                    <FontAwesomeIcon icon={faBolt} />
                     <a href="http://google.com">TabbyTech Solutions</a>
                 </div>
                 <ul className="socials">
                     <li>
                         <a href="https://www.facebook.com/">
-                            <i className="fab fa-facebook-f"></i>
+                            <FontAwesomeIcon icon={faFacebookF} />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.twitter.com/">
-                            <i className="fab fa-twitter"></i>
+                            <FontAwesomeIcon icon={faTwitter} />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/">
-                            <i className="fab fa-linkedin-in"></i>
+                            <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.pinterest.com/">
-                            <i className="fab fa-pinterest-p"></i>
+                            <FontAwesomeIcon icon={faPinterestP} />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/">
-                            <i className="fab fa-instagram"></i>
+                            <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </li>
                 </ul>
                 <div className="copyright">&copy; 2024 TabbyTech Solutions</div>
                 <BackTop>
-                    <div className="goTop">
-                        <i className="fas fa-arrow-circle-up"></i>
+                    <div className="goTop" style={{ textAlign: "center" }}>
+                        <div style={{ marginTop: "8px", marginBottom: "8px", fontSize: "16px", color: "#FFA500" }}>
+                            Top
+                        </div>
+                        <FontAwesomeIcon icon={faArrowCircleUpSolid} size="3x" className="solid-icon"  />
+                        <FontAwesomeIcon icon={faCircleUpRegular} size="3x" className="regular-icon" />
                     </div>
                 </BackTop>
             </div>

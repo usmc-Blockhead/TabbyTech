@@ -1,3 +1,4 @@
+
 /* 
 general 
 -------
@@ -234,7 +235,7 @@ hero
 ---- 
 */
 .heroBlock {
-  background: url('../public/images/6b7f6b118ebc01f6e8d8b6e6027398af.jpg') no-repeat;
+  background: url('H:\NucampFolder\My porfolio\React Projects\tabbytech-site\src\assets\images\6b7f6b118ebc01f6e8d8b6e6027398af.jpg') no-repeat;
   background-position: 50% 100%;
   background-size: cover;
   height: 100vh;
@@ -490,6 +491,16 @@ footer
 
 .footer .socials a:hover {
   color: #FFA500; /* Orange on hover */
+}
+
+.footer.goTop {
+  font-size: 24px;
+  color: #FFA500; /* Default orange color */
+  transition: color 0.3s ease;
+}
+
+.footer.goTop.regular-icon {
+  color: #FFF !important; /* White color when over the footer */
 }
 
 .footer .goTop:hover {

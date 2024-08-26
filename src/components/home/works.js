@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Modal } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import pumpkinImage from "../../assets/images/Pumpkin2.jpg";
+
 
 class AppWorks extends React.Component {
     state = { visible: false };
@@ -44,7 +46,7 @@ At TabbyTech Solutions, our brand is as unique and vibrant as the orange cats th
                         onCancel={this.handleCancel}
                         footer={null}
                     >
-                        <img src="../images/Pumpkin (2).jpg" alt="pumpkin & sunny" style={{ width: "100%" }}/>
+                        <img src={pumpkinImage} alt="Pumpkin & Sunny" style={{ width: "100%" }} />
                     </Modal>
                 </div>
             </div>
