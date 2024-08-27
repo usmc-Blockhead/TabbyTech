@@ -1,6 +1,6 @@
 {
   "name": "tabbytech-site",
-  "homepage": "tabbytechsolutions.com",
+  "homepage": "http://www.tabbytechsolutions.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
