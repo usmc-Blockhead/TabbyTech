@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tabbytechsolutions.com/static/css/main.dd96e9f1.css",
+    "main.js": "/tabbytechsolutions.com/static/js/main.a2d1d0b4.js",
+    "static/media/bg-works.jpg": "/tabbytechsolutions.com/static/media/bg-works.abd66d06d525eadfd24a.jpg",
+    "static/media/easy-customise.jpg": "/tabbytechsolutions.com/static/media/easy-customise.d4fe22138e1668906aab.jpg",
+    "static/media/great-support.jpg": "/tabbytechsolutions.com/static/media/great-support.13341f4e93333e45ebbe.jpg",
+    "static/media/advanced-option.jpg": "/tabbytechsolutions.com/static/media/advanced-option.84c7d0693123632c9035.jpg",
+    "static/media/modern-design.jpg": "/tabbytechsolutions.com/static/media/modern-design.e2114f5b8abbe8b1fa8b.jpg",
+    "static/media/clean-design.jpg": "/tabbytechsolutions.com/static/media/clean-design.728069dab437b67d9da8.jpg",
+    "static/media/unlimited-features.jpg": "/tabbytechsolutions.com/static/media/unlimited-features.a0b8acf77e6b57772078.jpg",
+    "static/media/logo.jpg": "/tabbytechsolutions.com/static/media/logo.1082ef311d215c278c40.jpg",
+    "static/media/Pumpkin2.jpg": "/tabbytechsolutions.com/static/media/Pumpkin2.9359e2787785df51c8c8.jpg",
+    "index.html": "/tabbytechsolutions.com/index.html",
+    "main.dd96e9f1.css.map": "/tabbytechsolutions.com/static/css/main.dd96e9f1.css.map",
+    "main.a2d1d0b4.js.map": "/tabbytechsolutions.com/static/js/main.a2d1d0b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd96e9f1.css",
+    "static/js/main.a2d1d0b4.js"
+  ]
+}
