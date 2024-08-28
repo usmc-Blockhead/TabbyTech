@@ -1,4 +1,5 @@
 
+
 /* 
 general 
 -------
@@ -235,7 +236,7 @@ hero
 ---- 
 */
 .heroBlock {
-  background: url('H:\NucampFolder\My porfolio\React Projects\tabbytech-site\src\assets\images\6b7f6b118ebc01f6e8d8b6e6027398af.jpg') no-repeat;
+  background: url('./assets/images/6b7f6b118ebc01f6e8d8b6e6027398af.jpg') no-repeat;
   background-position: 50% 100%;
   background-size: cover;
   height: 100vh;
