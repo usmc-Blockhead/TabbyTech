@@ -1,13 +1,13 @@
 import React from "react";
-
-import { List, Card, Button } from "antd";
+import Button from "../common/button";
+import { List, Card } from "antd";
 
 const data = [
     {
         title: "Basic",
         content: [
             {
-                price: "$59.99",
+                price: "Negotiable",
                 site: "1 page basic site",
                 contact: "Contact Form",
                 user: "1 user",
@@ -21,7 +21,7 @@ const data = [
         title: "Premium",
         content: [
             {
-                price: "$199.99",
+                price: "Let's Talk!",
                 site: "3 page premium site",
                 contact: "Contact Form and Chat Bot",
                 user: "up to 5 users",
@@ -35,20 +35,28 @@ const data = [
         title: "Enterprise",
         content: [
             {
-                price: "Contact for Qoute",
+                price: "Get a Qoute",
                 site: "Premium site by design",
                 contact: "Many options by designs",
                 user: "up to 15 users",
                 support: "24/7 support",
                 domain: "First year Domain and Hosting included",
                 backup: "Safe, reliable backup",
-
             },
         ],
     },
 ];
 
 function AppPricing() {
+    const scrollToContact = () => {
+        const element = document.getElementById("AppContact");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.error("Element with id 'AppContact' not found.");
+        }
+    };
+
     return (
         <div
             id="pricing"
@@ -80,8 +88,9 @@ function AppPricing() {
                                 <p>{item.content[0].backup}</p>
                                 <Button
                                     type="primary"
-                                    size="large">
-                                    <i className="fab fa-telegram-plane"></i>{" "}
+                                    size="large"
+                                    onClick={scrollToContact}
+                                    className="fab fa-telegram-plane">
                                     Get Started
                                 </Button>
                             </Card>

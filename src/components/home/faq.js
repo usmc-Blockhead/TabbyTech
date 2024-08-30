@@ -1,10 +1,20 @@
 import React from "react";
+import Button from "../common/button";
 
-import { Collapse, Button } from "antd";
+import { Collapse } from "antd";
 
 const { Panel } = Collapse;
 
 function AppFaq() {
+    const scrollToContact = () => {
+        const element = document.getElementById("AppContact");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.error("Element with id 'AppContact' not found.");
+        }
+    };
+
     return (
         <div
             id="faq"
@@ -69,7 +79,8 @@ function AppFaq() {
                     <Button
                         type="primary"
                         size="large"
-                        className="custom-button">
+                        className="custom-button"
+                        onClick={scrollToContact}>
                         <i className="fas fa-envelope"></i> Email your question
                     </Button>
                 </div>

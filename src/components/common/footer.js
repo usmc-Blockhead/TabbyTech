@@ -71,7 +71,7 @@ function AppFooter() {
                             Top
                         </div>
                         <FontAwesomeIcon icon={faArrowCircleUpSolid} size="3x" className="solid-icon"  />
-                        <FontAwesomeIcon icon={faCircleUpRegular} size="3x" className="regular-icon" />
+                        <FontAwesomeIcon icon={faCircleUpRegular} size="3x" className="regular-icon" hidden/>
                     </div>
                 </BackTop>
             </div>
