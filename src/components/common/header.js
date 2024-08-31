@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.jpg";
-import { Anchor, Drawer, Button } from "antd";
+import Button from "./button";
+import { Anchor, Drawer } from "antd";
 
 const { Link } = Anchor;
 
