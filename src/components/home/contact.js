@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "../common/button";
 // import { useForm, ValidationError } from "@formspree/react";
-import { Input } from "antd";
 
-// const { TextArea } = Input;
 
 function AppContact() {
     // const [state, handleSubmit] = useForm("xjkbldjk");
