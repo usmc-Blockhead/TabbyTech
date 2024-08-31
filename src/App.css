@@ -432,18 +432,65 @@ pricing block
 contact
 -------
 */
-.contactBlock .ant-form {
+
+.contactBlock {
   max-width: 640px;
   margin: auto;
-  background: #FFF6E8; /* Light cream background for form */
-  padding: 20px;
+  background: #FFF6E8; /* Light cream background for the form */
+  padding: 40px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.contactBlock .ant-form textarea {
-  min-height: 120px;
-  height: 120px;
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
 }
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333; /* Darker text color for labels */
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #FFF; /* White background for inputs */
+  color: #333; /* Dark text color for inputs */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #FF6F61; /* TabbyTech primary color for focus state */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Slight glow for focus */
+}
+
+.submitBtn {
+  background: #FFA500; /* Primary button color matching TabbyTech theme */
+  color: #FFF; /* White text color */
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background: #e39300; /* Darker shade on hover */
+}
+
 
 /* 
 chatbot

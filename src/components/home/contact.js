@@ -1,19 +1,10 @@
 import React from "react";
 import Button from "../common/button";
-// import { useForm, ValidationError } from "@formspree/react";
-
+import "../../App.css"; 
 
 function AppContact() {
-    // const [state, handleSubmit] = useForm("xjkbldjk");
-
-    // if (state.succeeded) {
-    //     return <p>Thanks for Contacting us!</p>;
-    // }
-
     return (
-        <div
-            id="AppContact"
-            className="block contactBlock">
+        <div id="AppContact" className="block contactBlock">
             <div className="container-fluid">
                 <div className="titleHolder">
                     <h2>Get in Touch</h2>
@@ -21,12 +12,9 @@ function AppContact() {
                 <form
                     action="https://formsubmit.co/admin@tabbytechsolutions.com"
                     method="POST"
-                    className="login-form"
-                    initialValues={{ remember: true }}>
+                    className="contactForm"
+                >
                     {/* Hidden fields for advanced features */}
-                    {/* <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html" /> */}
-                    {/* <input type="hidden" name="_cc" value="another@email.com" /> */}
-                    {/* <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase" /> */}
                     <input
                         type="hidden"
                         name="_subject"
@@ -48,39 +36,66 @@ function AppContact() {
                         value="table"
                     />
 
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Please enter your full name!"
-                        required
-                    />
-                    <input
-                        name="email"
-                        type="email"
-                        placeholder="Please input your E-mail!"
-                        required
-                    />
-                    <input
-                        name="telephone"
-                        type="number"
-                        placeholder="Telephone"
-                    />
-                    <input
-                        name="subject"
-                        type="text"
-                        placeholder="Subject"
-                    />
-                    <input
-                        name="message"
-                        type="text"
-                        placeholder="Message"
-                    />
-
-                    <Button
-                        type="submit"
-                        className="login-form-button">
-                        Submit
-                    </Button>
+                    <div className="formGroup">
+                        <label htmlFor="name">Full Name</label>
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        />
+                    </div>
+                    
+                    <div className="formGroup">
+                        <label htmlFor="email">E-mail Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email address"
+                            required
+                        />
+                    </div>
+                    
+                    <div className="formGroup">
+                        <label htmlFor="telephone">Telephone Number</label>
+                        <input
+                            id="telephone"
+                            name="telephone"
+                            type="tel"
+                            placeholder="Enter your telephone number"
+                        />
+                    </div>
+                    
+                    <div className="formGroup">
+                        <label htmlFor="subject">Subject</label>
+                        <input
+                            id="subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Enter the subject"
+                        />
+                    </div>
+                    
+                    <div className="formGroup">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Enter your message"
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <div className="formGroup">
+                        <Button
+                            type="submit"
+                            className="submitBtn">
+                            Submit
+                        </Button>
+                    </div>
                 </form>
             </div>
         </div>
