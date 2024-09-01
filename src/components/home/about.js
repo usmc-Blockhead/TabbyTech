@@ -32,14 +32,14 @@ function AppAbout() {
         <div
             id="about"
             className="block aboutBlock"
-            style={{ backgroundColor: "#F2E8DF", color: "#000000" }} // Beige background, dark text
+            style={{ backgroundColor: "#F2E8DF", color: "#000000" }} 
         >
             <div className="container-fluid">
                 <div className="titleHolder" style={{ marginBottom: "30px" }}>
-                    <h2 style={{ color: "#000000" }}>About TabbyTech Solutions</h2> {/* Dark text for contrast */}
+                    <h2 style={{ color: "#000000" }}>About TabbyTech Solutions</h2> 
                 </div>
                 <div className="contentHolder">
-                    <p style={{ color: "#708090" }}> {/* Slate Gray text for subtle contrast */}
+                    <p style={{ color: "#708090" }}> 
                         At TabbyTech Solutions, we blend cutting-edge technology with the unique charm of orange tabby cats to deliver creative, high-quality web development solutions. Our approach is inspired by the agility, precision, and warmth of these feline companions, ensuring that each project is not only technically sound but also brimming with personality. Whether it's crafting a sleek user interface or simplifying complex workflows, we’re here to help you navigate the digital landscape with confidence and creativity.
                     </p>
                 </div>

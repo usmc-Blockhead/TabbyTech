@@ -17,7 +17,7 @@ function AppHome() {
             <AppWorks />
             <AppFaq />
             <AppPricing />
-            <AppContact id="AppContact"/>
+            <AppContact id="contact"/>
         </div>
     );
 }

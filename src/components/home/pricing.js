@@ -49,11 +49,11 @@ const data = [
 
 function AppPricing() {
     const scrollToContact = () => {
-        const element = document.getElementById("AppContact");
+        const element = document.getElementById("contact");
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
         } else {
-            console.error("Element with id 'AppContact' not found.");
+            console.error("Element with id 'contact' not found.");
         }
     };
 
@@ -87,10 +87,10 @@ function AppPricing() {
                                 <p>{item.content[0].domain}</p>
                                 <p>{item.content[0].backup}</p>
                                 <Button
-                                    type="primary"
+                                    type="default"
                                     size="large"
                                     onClick={scrollToContact}
-                                    className="fab fa-telegram-plane">
+                                >
                                     Get Started
                                 </Button>
                             </Card>

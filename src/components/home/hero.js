@@ -1,5 +1,6 @@
 import React from "react";
-// import { Button } from "antd";
+import Button from "../common/button";
+
 
 import { Carousel } from "antd";
 
@@ -26,6 +27,15 @@ const items = [
 ];
 
 function AppHero() {
+    const scrollToContact = () => {
+        const element = document.getElementById("contact");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.error("Element with id 'AppContact' not found.");
+        }
+    };
+    
     return (
         <div
             id="hero"
@@ -39,17 +49,14 @@ function AppHero() {
                             <div className="content">
                                 <h3>{item.title}</h3>
                                 <p>{item.content}</p>
-                                {/* <div className="btnHolder">
+                                <div className="btnHolder">
                                     <Button
                                         type="primary"
-                                        size="large">
+                                        size="large"
+                                        onClick={scrollToContact}>
                                         Learn More
                                     </Button>
-                                    <Button size="large">
-                                        <i className="fas fa-desktop"></i> Watch
-                                        a Demo
-                                    </Button>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     );

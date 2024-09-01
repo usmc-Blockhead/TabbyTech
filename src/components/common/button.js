@@ -20,8 +20,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-    type: 'primary',
-    size: 'medium',
+    type: 'default',
+    size: 'large',
     onClick: () => {},
     className: '',
 };

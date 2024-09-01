@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.jpg";
 import Button from "./button";
 import { Anchor, Drawer } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 
 const { Link } = Anchor;
 
 function AppHeader() {
-    const [visible, setVisible] = useState(false);
+    const [open, setOpen] = useState(false);
 
     const showDrawer = () => {
-        setVisible(true);
+        setOpen(true);
     };
 
     const onClose = () => {
-        setVisible(false);
+        setOpen(false);
     };
 
     return (
@@ -36,14 +37,13 @@ function AppHeader() {
                 </div>
                 <div className="mobileVisible">
                     <Button type="primary" onClick={showDrawer}>
-                        <i className="fas fa-bars"></i>
+                        <MenuOutlined />
                     </Button>
                     <Drawer
                         placement="right"
-                        closable={true} // Enables the default close button
+                        closable={true}
                         onClose={onClose}
-                        visible={visible}
-                        closeIcon={<i className="fas fa-times"></i>} // Optional: Customize the close icon
+                        open={open}
                     >
                         <Anchor targetOffset="65">
                             <Link href="#hero" title="Home" />
