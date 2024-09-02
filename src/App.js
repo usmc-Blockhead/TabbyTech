@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 
 import AppFooter from "./components/common/footer";
 import AppHeader from "./components/common/header";
-import AppChat from "./components/common/chat";
 import AppHome from "./views/home";
 
 import { Layout } from "antd";
@@ -22,7 +21,6 @@ function App() {
             <Footer>
                 <AppFooter />
             </Footer>
-            <AppChat />
         </Layout>
     );
 }
