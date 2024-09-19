@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../common/button";
+import CustomButton from "../common/customButton";
 import { List, Card } from "antd";
 
 const data = [
@@ -78,7 +78,7 @@ function AppPricing() {
                     dataSource={data}
                     renderItem={(item) => (
                         <List.Item>
-                            <Card title={item.title}>
+                            <Card title={item.title} className="card-content">
                                 <p className="large">{item.content[0].price}</p>
                                 <p>{item.content[0].site}</p>
                                 <p>{item.content[0].contact}</p>
@@ -86,13 +86,11 @@ function AppPricing() {
                                 <p>{item.content[0].support}</p>
                                 <p>{item.content[0].domain}</p>
                                 <p>{item.content[0].backup}</p>
-                                <Button
-                                    type="default"
-                                    size="large"
-                                    onClick={scrollToContact}
-                                >
+                                <CustomButton onPress={scrollToContact} title="Get Started" />
+                                {/* <CustomButton
+                                    onClick={scrollToContact}>
                                     Get Started
-                                </Button>
+                                </CustomButton> */}
                             </Card>
                         </List.Item>
                     )}

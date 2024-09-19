@@ -1,12 +1,14 @@
 import React from "react";
 import ChatBot from "react-chatbotify";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const MyChatBot = () => {
 	let apiKey = null;
-	let modelType = "gpt-3.5-turbo";
+	const modelType = "gemini-pro";
 	let hasError = false;
+}
 
-function chatnew = async (params) => {
+    const chatnew = async (params) => {
     return <div>chatnew</div>;
 }
 

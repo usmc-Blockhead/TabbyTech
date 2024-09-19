@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../common/button";
+import CustomButton from "../common/button";
 import "../../App.css"; 
 
 function AppContact() {
@@ -89,11 +89,10 @@ function AppContact() {
                         </div>
                         
                         <div className="formGroup">
-                            <Button
-                                type="submit"
-                                className="submitBtn">
+                            <CustomButton
+                                type="submit">
                                 Submit
-                            </Button>
+                            </CustomButton>
                         </div>
                     </form>
                 </div>

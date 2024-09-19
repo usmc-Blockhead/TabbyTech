@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../common/button";
+import CustomButton from "../common/customButton";
 
 
 import { Carousel } from "antd";
@@ -50,12 +50,7 @@ function AppHero() {
                                 <h3>{item.title}</h3>
                                 <p>{item.content}</p>
                                 <div className="btnHolder">
-                                    <Button
-                                        type="primary"
-                                        size="large"
-                                        onClick={scrollToContact}>
-                                        Learn More
-                                    </Button>
+                                    <CustomButton onPress={scrollToContact} title="Learn More" />
                                 </div>
                             </div>
                         </div>

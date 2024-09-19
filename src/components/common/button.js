@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "../../App.css";
 
-const Button = ({ type, size, onClick, children, className }) => {
+const CustomButton = ({ type, size, onClick, children, className }) => {
     const buttonClass = `btn btn-${type} btn-${size} ${className}`;
 
     return (
@@ -11,7 +12,7 @@ const Button = ({ type, size, onClick, children, className }) => {
     );
 };
 
-Button.propTypes = {
+CustomButton.propTypes = {
     type: PropTypes.string,
     size: PropTypes.string,
     onClick: PropTypes.func,
@@ -19,11 +20,11 @@ Button.propTypes = {
     className: PropTypes.string,
 };
 
-Button.defaultProps = {
+CustomButton.defaultProps = {
     type: 'default',
     size: 'large',
     onClick: () => {},
-    className: '',
+    className: 'button-56',
 };
 
-export default Button;
+export default CustomButton;

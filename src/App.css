@@ -47,15 +47,74 @@ p {
 Button
 ------------
 */
-.custom-button {
+/* .custom-button {
   background-color: rgb(255, 246, 232);
   border-color: rgb(255, 246, 232);
-  color: #000; /* Dark color for text readability */
+  color: #000; /* Dark color for text readability 
+}*/
+
+/* .custom-button:hover {
+  background-color: rgb(255, 230, 200); Slightly darker shade on hover
+  border-color: rgb(255, 230, 200);
+}  */
+
+/* CSS button 56 */
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.custom-button:hover {
-  background-color: rgb(255, 230, 200); /* Slightly darker shade on hover */
-  border-color: rgb(255, 230, 200);
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
 }
 
 /* 
@@ -297,6 +356,8 @@ block
 .block {
   padding: 60px 0;
   border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+  align-items: center;
 }
 
 /* 
@@ -427,6 +488,12 @@ pricing block
 
 .pricingBlock .fab {
   margin: 0 10px 0 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 
@@ -576,18 +643,27 @@ footer
   color: #FFA500; /* Orange on hover */
 }
 
-.footer.goTop {
+/* Default goTop button in the footer */
+.goTop {
   font-size: 24px;
   color: #FFA500; /* Default orange color */
   transition: color 0.3s ease;
 }
 
-.footer.goTop.regular-icon {
-  color: #FFF !important; /* White color when over the footer */
+/* Hover effect for the goTop button */
+.goTop:hover {
+  opacity: 0.7;
 }
 
-.footer .goTop:hover {
-  opacity: 0.7;
+/* Add this to control the color change when scrolled to the footer */
+.goTop.white-icon .solid-icon {
+  color: white; /* Change to white when at the footer */
+  transition: color 0.3s ease;
+}
+
+.goTop .solid-icon {
+  color: black; /* Default black color */
+  transition: color 0.3s ease;
 }
 
 .mobileVisible {

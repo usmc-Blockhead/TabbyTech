@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../common/button";
+import CustomButton from "../common/customButton";
 import { MailOutlined } from "@ant-design/icons";
 
 import { Collapse } from "antd";
@@ -77,13 +77,10 @@ function AppFaq() {
                         Trust us to make your experience stress-free and
                         enjoyable.
                     </p>
-                    <Button
-                        type="default"
-                        size="large"
-                        className="custom-button"
+                    <CustomButton
                         onClick={scrollToContact}>
                         <MailOutlined /> Email your questions
-                    </Button>
+                    </CustomButton>
                 </div>
             </div>
         </div>

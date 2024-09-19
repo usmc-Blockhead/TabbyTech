@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/TABBYTECH_cat.svg";
 import Button from "./button";
 import { Anchor, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
@@ -21,7 +21,7 @@ function AppHeader() {
         <div className="container-fluid">
             <div className="header">
                 <div className="logo">
-                    <img src={logo} alt="TabbyTech Logo" className="logo-icon" />
+                    <img src={logo} alt="TabbyTech Solutions" className="logo-icon" />
                     <a href="#about">TabbyTech Solutions</a>
                 </div>
                 <div className="mobileHidden">
