@@ -87,10 +87,6 @@ function AppPricing() {
                                 <p>{item.content[0].domain}</p>
                                 <p>{item.content[0].backup}</p>
                                 <CustomButton onPress={scrollToContact} title="Get Started" />
-                                {/* <CustomButton
-                                    onClick={scrollToContact}>
-                                    Get Started
-                                </CustomButton> */}
                             </Card>
                         </List.Item>
                     )}
